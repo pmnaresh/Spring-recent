@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="account" class="com.practice.model.Account" scope="singleton">
+		<constructor-arg value="1010" type="int"></constructor-arg>
+		<constructor-arg value="Naresh"></constructor-arg>
+		<constructor-arg value="80000" type="double"></constructor-arg>
+	</bean>
+	<bean id="account1" class="com.practice.model.Account" scope="prototype">
+		<constructor-arg value="1012" type="int"></constructor-arg>
+		<constructor-arg value="suaresh"></constructor-arg>
+		<constructor-arg value="80000" type="double"></constructor-arg>
+	</bean>
+	
+	<bean id ="account2" class ="com.practice.model.Account">
+	<property name="accountNo" value ="1020"></property>
+	<property name="accountName" value ="1020"></property>
+	<property name="accountBalance" value ="1020"></property>
+	<property name="address" ref ="address"></property>
+	<property name="contacts">
+	<list>
+	<value>99999999999</value>
+	<value>9999995555559</value>
+	<value>55555667899</value>
+	<value>99999999999</value>
+	<value>9999995555559</value>
+	<value>55555667899</value>
+	</list>
+	
+	</property>
+	
+	</bean>
+	
+	<bean id ="address" class="com.practice.model.Address">
+	<property name="street" value ="ng street"></property>
+	<property name="town" value ="MPL"></property>
+	</bean>
+
+</beans>

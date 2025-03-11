@@ -1,0 +1,6 @@
+com\practice\dao\impl\ProductDaoImpl.class
+com\practice\contoller\TestController.class
+com\practice\model\ProductDetails.class
+com\practice\config\AppConfig.class
+com\practice\serivices\ProductDetailsService.class
+com\practice\service\impl\ProductDetailsServiceimpl.class
