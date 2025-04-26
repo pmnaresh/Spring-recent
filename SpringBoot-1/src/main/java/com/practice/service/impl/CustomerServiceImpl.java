@@ -21,7 +21,7 @@ public class CustomerServiceImpl implements CustomerServcie {
 	@Override
 	public String saveCustomerService(Customer customer) {
 		System.out.println("in customerserviceimpl class-->"+customer);
-		custRepo.save(customer);
+//		custRepo.save(customer);
 		return "success";
 	}
 	@Override

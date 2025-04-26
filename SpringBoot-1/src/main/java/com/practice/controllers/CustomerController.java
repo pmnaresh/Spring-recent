@@ -20,15 +20,16 @@ public class CustomerController {
 	@Autowired
 	CustomerServcie customerServcie;
 
-	@PostMapping("/saveCustomer")
-	public String saveCustomer(@RequestBody Customer customer) {
-		System.out.println("in customer controller class");
+	@GetMapping("/saveCustomer")
+	public String saveCustomer( @RequestBody Customer customer) {
+		System.out.println("in customer controller class"+customer);
 		return customerServcie.saveCustomerService(customer);
 	}
 
 	@GetMapping("/getBycustomerId/{customerId}")
 	public Optional<Customer> getBycustomerId(@PathVariable("customerId") int customerId) {
-		return customerServcie.getByCustomerId(customerId);
+		customerServcie.getByCustomerId(customerId);
+		return null;
 	}
 
 	@GetMapping("/getByNameAndPincode")
